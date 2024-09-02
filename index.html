@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Smart Scan</title>
+   <link rel="stylesheet" href="styling.css">
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.min.js"></script>
+   <script src="app.js" defer></script>
+</head>
+<body>
+   <div class="header">
+       <h1>Meal Tracker</h1>
+   </div>
+   <div class="container">
+       <div id="menu">
+           <button id="add-member-button">Add Member</button>
+           <button id="get-member-button">Get Member by ID</button>
+           <button id="scan-member-button">Scan Member ID</button>
+           <button id="get-all-members-button">Get All Members</button>
+       </div>
+       <button id="cancel-button" class="hidden">Cancel</button>
+
+       <div id="add-member-section" class="hidden">
+           <h2>Add New Member</h2>
+           <form id="add-member-form">
+               <input type="text" id="new-member-name" placeholder="Name" required>
+               <input type="number" id="new-member-id" placeholder="ID" required>
+               <input type="number" id="new-member-male" placeholder="Number of Male Members" required>
+               <input type="number" id="new-member-female" placeholder="Number of Female Members" required>
+               <input type="text" id="new-member-special" placeholder="Special Case" required>
+               <input type="file" id="new-member-image" accept="image/*" required>
+               <button type="submit">Add Member</button>
+           </form>
+           <div id="add-member-message" class="success-message hidden"></div>
+       </div>
+
+       <div id="get-member-section" class="hidden">
+           <h2>Get Member by ID</h2>
+           <form id="get-member-form">
+               <input type="number" id="get-member-id" placeholder="ID" required>
+               <button type="submit">Get Member</button>
+           </form>
+           <div id="get-member-info"></div> <!-- For displaying fetched member info -->
+           <div id="get-member-error" class="error-message hidden"></div> <!-- New error message div -->
+       </div>
+
+       <div id="scan-member-section" class="hidden">
+           <h2>Scan Member ID</h2>
+           <video id="reader" width="300" height="300" style="display: none;"></video>
+           <div id="scan-result" class="scan-result error-message hidden"></div> <!-- For scan results/errors -->
+       </div>
+
+       <div id="all-members-section" class="hidden">
+           <h2>All Members</h2>
+           <div id="all-members"></div>
+       </div>
+   </div>
+   <footer>
+    <p>© 2024 Nur Corp. Developed by Numer Ahmed.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #5A5A5A;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #8B4513;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.menu button {
+    background-color: #8B4513;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.menu button:hover {
+    background-color: #A0522D;
+}
+
+.content {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.hidden {
+    display: none;
+}
+
+.success-message {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    color: #5A5A5A;
+}
+
+#all-members {
+    margin-top: 20px;
+}
+
+.member {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.member img {
+    display: block;
+    margin-top: 10px;
+}
+
+.member button {
+    background-color: #8B4513;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.member button:hover {
+    background-color: #A0522D;
+}
+
+#cancel-button,
+#cancel-add-member,
+#cancel-get-member,
+#cancel-scan-member {
+    background-color: #A0522D;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#cancel-button:hover,
+#cancel-add-member:hover,
+#cancel-get-member:hover,
+#cancel-scan-member:hover {
+    background-color: #B87333;
+}

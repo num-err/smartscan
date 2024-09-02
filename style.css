@@ -1,0 +1,177 @@
+/* Ensure that the body and html fill the height of the viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* The container will take up all available space except the footer */
+.container {
+    flex: 1; /* Flexbox will make this container expand to fill available space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+/* The footer is fixed at the bottom of the page */
+footer {
+    background-color: #8B4513;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+.menu {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu button {
+    background-color: #8B4513;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.menu button:hover {
+    background-color: #A0522D;
+}
+
+.content {
+    width: 100%;
+    max-width: 600px;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.hidden {
+    display: none;
+}
+
+.success-message, .error-message {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    display: none; /* Initially hidden */
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.success-message {
+    background-color: #e0ffe0;
+    color: #228B22;
+}
+
+.error-message {
+    background-color: #ffe0e0;
+    color: #B22222;
+}
+
+#all-members {
+    margin-top: 20px;
+}
+
+.member {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.member img {
+    display: block;
+    margin-top: 15px;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+.member button {
+    background-color: #8B4513;
+    color: white;
+    border: none;
+    padding: 7px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.member button:hover {
+    background-color: #A0522D;
+}
+
+#cancel-button,
+#cancel-add-member,
+#cancel-get-member,
+#cancel-scan-member {
+    background-color: #A0522D;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#cancel-button:hover,
+#cancel-add-member:hover,
+#cancel-get-member:hover,
+#cancel-scan-member:hover {
+    background-color: #B87333;
+}
+
+/* Mobile Enhancements */
+@media (max-width: 768px) {
+    .header {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+
+    .menu button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .success-message, .error-message {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .member img {
+        max-width: 150px;
+    }
+
+    #cancel-button, #cancel-add-member, #cancel-get-member, #cancel-scan-member {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}

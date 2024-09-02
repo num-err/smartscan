@@ -1,0 +1,29 @@
+{
+  "name": "smartscan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.mjs",
+  "scripts": {
+    "start": "node ./server.mjs",
+    "dev": "nodemon ./server.mjs"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1659.0",
+    "axios": "^1.7.2",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "html5-qrcode": "^2.3.8",
+    "https": "^1.0.0",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.5.2",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.4",
+    "npm": "^10.8.1",
+    "qrcode": "^1.5.4",
+    "telnet": "^0.0.1"
+  },
+  "type": "module",
+  "devDependencies": {}
+}
